@@ -335,7 +335,10 @@ p1.describe();
 Person p2 = Person(name: "Sara", age: 28);
 p2.describe();
 
-Ahmed a1 = Ahmed();
+Ahmed a1 = Ahmed(
+  "Ahmed",
+  22,
+);
 a1.name= "Ahmed";
 a1.age= 22;
 a1.describe();
@@ -438,6 +441,17 @@ class Rectangle{
 /// inheritance, polymorphism, abstraction, encapsulation
 /// inhritance
 class Ahmed extends Person{
+
+  Ahmed(super.name , super.age );
+
+// edit on describe method
+  @override
+  void describe() {
+    print("Ahmed's Name: $name, Age: $age");
+    // run also the old logic from parent class
+    super.describe();
+  }
+
 
 }
 
