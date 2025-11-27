@@ -322,7 +322,38 @@ print(isEven(4));
 print(areaOfRectangle(length: 5.0, width: 10.0));
 List<int> newNums = [10, 25, 3, 45, 8];
 print(largestNumber(newNums));
+print(largestNumber([1,2,3,4,5]));
 printEvenNumbers(newNums);
+
+// objects 
+Person p1 =Person(name: "Ali", age: 25);
+print(p1);
+
+p1.name= "Omar";
+p1.describe();
+
+Person p2 = Person(name: "Sara", age: 28);
+p2.describe();
+
+Ahmed a1 = Ahmed();
+a1.name= "Ahmed";
+a1.age= 22;
+a1.describe();
+
+//////////////////////////////////////////
+
+Rectangle rect1 =Rectangle();
+rect1.length= 7.0;
+rect1.width= 4.0;
+print("Area of rectangle: ${rect1.area()}");
+////////////////////
+Animal animal1 = Animal();
+animal1.name= "scarface";
+animal1.eat();
+Dog dog1 = Dog();
+dog1.name= "rex";
+dog1.eat();
+dog1.bark();
 
 }
 
@@ -375,3 +406,52 @@ void printEvenNumbers(List<int> numbers) {
     }
   }
 }
+// classes and OOP
+// name of class should start with capital letter
+class Person{
+  //String name= 'Ali';
+  //int age = 30;
+  String name;
+  int age;
+  // constructor
+  Person({this.name= 'Ali', this.age=30});
+
+
+
+  void describe(){
+    print("Name: $name, Age: $age");
+  }
+}
+
+
+// example 2 class rectangle
+class Rectangle{
+  double length = 5.0;
+  double width = 10.0;
+  
+
+  double area(){
+    return length * width;
+  }
+}
+
+/// inheritance, polymorphism, abstraction, encapsulation
+/// inhritance
+class Ahmed extends Person{
+
+}
+
+///// example 3 inheritance animal and dog
+  class Animal{
+    String? name;
+    String ? type;
+    void eat(){
+      print("$name is eating");
+    }
+
+  }
+  class Dog extends Animal{
+    void bark(){
+      print("$name is barking");
+    }
+  }
