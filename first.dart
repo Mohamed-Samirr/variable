@@ -197,8 +197,139 @@ String garadee = 'A';
 
   }
 
+//collection  data type list, map, set
+
+// list
+List<String> fruits = ['apple', 'banana', 'orange'];
+
+// list dynamic
+List numbers = [1, 2, 3, 4, 5];
+
+print(fruits);
+print(numbers);
+// indexing start from 0
+print(numbers[2]);
+
+//helpers in list 
+print(numbers.isNotEmpty);
+
+print(fruits.length);
+
+numbers.add(6);
+print(numbers);
+numbers.remove(3);
+print(numbers);
+numbers.removeAt(0); // remove element at index 0 not value 0
+print(numbers);
+
+
+String name1 = 'Mohamed Samir';
+print(name1[5]);
 
 
 
+// set
+// repetative values not allowed
+Set<int> uniqueNumbers = {1, 2, 3,3, 4, 5};
+print(uniqueNumbers);
+print(uniqueNumbers.toList());
 
+// map
+// dynamic map
+Map dataa ={
+
+  'name': 'mohamed',
+  'age': 30,
+};
+Map<String, dynamic> person = {
+  'name': 'Mohamed',
+  'age': 30,
+};
+print(dataa['name']);
+dataa['age'] = 31; // update value
+dataa['city'] = 'Cairo'; // add new key
+print(dataa);
+
+
+
+// loops for, while,for in, do while
+// intialization, condition, increment/decrement
+
+//for loop
+
+for (int i = 5; i <10; i++) {
+  print(i);
+
+}
+
+// while loop
+int j = 5;
+while (j < 10) {
+  print(j);
+  j++;
+}
+
+List<String> nn=['A', 'B', 'C', 'D'];
+for (int i=0; i<nn.length; i++){
+  print(nn[i]);
+}
+
+// for in loop
+for (String item in nn){
+  print(item);
+
+}
+
+// example 1
+List list=[1,2,3];
+for (int i=0; i<list.length; i++){
+  list.removeAt(i);
+  print(list);
+}
+print(list); // final list will have one element [2]
+
+// exapmle 2
+List <int> sumNumbbers =[2,15,34,68,53];
+int sumTotal =0;
+for (int i =0; i<sumNumbbers.length; i++){
+  sumTotal += sumNumbbers[i];
+
+}
+print("sum total: $sumTotal");
+
+// example 3 factorial
+int numberFactorial =5;
+int factorial =1;
+for (int i =1; i<=numberFactorial; i++){
+  factorial *= i;
+}
+print("factorial of $numberFactorial is $factorial");
+
+// example 4 how many words in a list contain the letter 'a'
+List<String> words = ['ahmed','marwan','tawfik','youssef','andrew'];
+int count =0;
+for (String word in words){
+  if (word.toLowerCase().contains('a')){
+    count++;
+  }
+}
+print("Number of words containing 'a': $count");
+
+// calling function
+greet(name: "John", height: 5.9,);
+print(add(5,6));
+
+}
+
+
+//function
+// return type, name, parameters, body
+void greet({required String name,required height,int? age,bool ? isStudent}) {  // optional parameter age   rest parameters is required
+  print("Hello $name and my age is $age");
+}
+// curl praktice make a parameter required and nameed
+
+
+int add(int a, int b) {
+  return a + b;
 }
