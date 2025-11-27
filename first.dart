@@ -318,6 +318,11 @@ print("Number of words containing 'a': $count");
 // calling function
 greet(name: "John", height: 5.9,);
 print(add(5,6));
+print(isEven(4));
+print(areaOfRectangle(length: 5.0, width: 10.0));
+List<int> newNums = [10, 25, 3, 45, 8];
+print(largestNumber(newNums));
+printEvenNumbers(newNums);
 
 }
 
@@ -332,4 +337,41 @@ void greet({required String name,required height,int? age,bool ? isStudent}) {  
 
 int add(int a, int b) {
   return a + b;
+}
+
+
+//example 2 iseven function 
+String isEven(int number) {
+  if (number % 2 == 0) {
+    return "Even";
+  } else {
+    return "false";
+  }
+}
+
+// example 3 calculate area of rectangle
+double areaOfRectangle({required double length,required double width}) {
+  return 0.5*length * width;
+}
+
+// example 4 largest number in a list
+int largestNumber(List<int> numbers) {
+  int largest = numbers[0];
+  for (int number in numbers) {
+    if (number > largest) {
+      largest = number;
+    }
+  }
+  return largest;
+}
+
+// example 5 function "from list print even numbers only"
+
+
+void printEvenNumbers(List<int> numbers) {
+  for (int number in numbers) {
+    if (number % 2 == 0) {
+      print(number);
+    }
+  }
 }
