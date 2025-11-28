@@ -442,7 +442,7 @@ class Rectangle{
 /// inhritance
 class Ahmed extends Person{
 
-  Ahmed(super.name , super.age );
+  Ahmed(String name, int age) : super(name: name, age: age);
 
 // edit on describe method
   @override
